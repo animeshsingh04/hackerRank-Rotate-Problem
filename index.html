@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Buttons Grid</title>
+        <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+        <style type="text/css">
+        	.btnContainer{
+        		width: 75%
+        	}
+        	.btnContainer > .btnClass{
+        		width:30%;
+        		font-size: 24px;
+        		height: 48px
+        	}
+
+
+        </style>
+    </head>
+    <body>
+      
+<script type="text/javascript">
+	  let nums=[1,2,3,6,9,8,7,4];
+      const ids=[1,2,3,6,9,8,7,4];
+	 function rotate(){
+        nums.unshift(nums.pop());
+    	for (var i=0; i<=7; i++) {
+        document.getElementById("btn"+ids[i]).innerHTML=nums[i];
+    }
+    });
+
+</script>
+
+        <div class ="btnContainer" id="btns">
+            <button id="btn1" class="btnClass">1</button>
+            <button id="btn2" class="btnClass">2</button>
+            <button id="btn3" class="btnClass">3</button>
+            <button id="btn4" class="btnClass">4</button>
+            <button id="btn5" onclick="rotate()" class="btnClass">5</button>
+            <button id="btn6" class="btnClass">6</button>
+            <button id="btn7" class="btnClass">7</button>
+            <button id="btn8" class="btnClass">8</button>
+            <button id="btn9" class="btnClass">9</button>
+        </div>
+        
+    </body>
+</html>
